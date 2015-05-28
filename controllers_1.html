@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+< ng-app ="myApp">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<link rel="stylesheet" type="text/css" href="app.css">
+<body>
+
+<div ng-controller="GreetingController">
+    {{ greeting }}
+</div>
+<div ng-controller="GreetingController2">
+  {{ greeting2 }}
+// using functions defined in controller
+<hr>
+Two times <input ng-model="num"> equals {{ double(num) }}
+</div>
+<hr>
+<div ng-controller="SpicyController">
+    <button ng-click="chiliSpicy()">Chili</button>
+    <button ng-click="jalapenoSpicy()">Jalapeño</button>
+    <p>The food is {{spice}} spicy!</p>
+</div>
+
+<hr>
+
+<div ng-controller="SpicyController2">
+    <input ng-model="customSpice">
+    <button ng-click="spicy('chili')">Chili</button>
+    <button ng-click="spicy(customSpice)">Custom spice</button>
+    <p>The food is {{spice}} spicy!</p>
+</div>
+<hr>
+scope inheritance example
+
+<div class="spicy">
+    <div ng-controller="MainController">
+        <p>Good {{timeOfDay}}, {{name}}!</p>
+
+        <div ng-controller="ChildController">
+            <p>Good {{timeOfDay}}, {{name}}!</p>
+
+            <div ng-controller="GrandChildController">
+                <p>Good {{timeOfDay}}, {{name}}!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var myApp = angular.module('myApp',[]);
+    // c1
+    myApp.controller('GreetingController', ['$scope', function($scope) {
+        $scope.greeting = 'Hola!';
+        // adding function to controller
+        $scope.double = function(value) { return value * 2; };
+
+    }]);
+    //c2
+    myApp.controller('GreetingController2', ['$scope', function($scope) {
+        $scope.greeting2 = 'Hola!2';
+    }]);
+    //c3
+     myApp.controller('SpicyController', ['$scope', function($scope) {
+        $scope.spice = 'very'; // default value
+
+        $scope.chiliSpicy = function() {
+            $scope.spice = 'chili';
+        };
+
+        $scope.jalapenoSpicy = function() {
+            $scope.spice = 'jalapeño';
+        };
+    }]);
+
+    //c4
+
+    myApp.controller('SpicyController2', ['$scope', function($scope) {
+        $scope.customSpice = "wasabi";
+        $scope.spice = 'very';
+        $scope.spicy = function(spice) {
+            $scope.spice = spice;
+        };
+    }]);
+
+    // scope inheritance
+
+    myApp.controller('MainController', ['$scope', function($scope) {
+        $scope.timeOfDay = 'morning';
+        $scope.name = 'Nikki';
+    }]);
+    myApp.controller('ChildController', ['$scope', function($scope) {
+        $scope.name = 'Mattie';
+    }]);
+    myApp.controller('GrandChildController', ['$scope', function($scope) {
+        $scope.timeOfDay = 'evening';
+        $scope.name = 'Gingerbread Baby';
+    }]);
+
+
+</script>
+
+</body>
+</html>
