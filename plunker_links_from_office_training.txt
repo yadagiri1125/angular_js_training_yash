@@ -1,0 +1,89 @@
+
+
+Directive Ex1
+http://plnkr.co/edit/8odA0aQXQtGEMTAiRk7M?p=info
+
+Directive Ex2
+http://plnkr.co/edit/KEcn3WYcVtIh8KHwdakd?p=info
+
+Directive Ex3
+http://plnkr.co/edit/Ua6bwfHSJKLq6OMI0ALl?p=info
+
+Directive Ex4
+http://plnkr.co/edit/3ouffbhADYmGmp91CEyT?p=info
+
+
+Routing Ex 1
+http://plnkr.co/edit/7WI4d3Xoi4iQpiwXQYau?p=info
+
+Routing Ex 2
+http://plnkr.co/edit/gzgT9AGaPbUetpb6EwWe?p=info
+
+Routing Ex 3 CRUD Operations
+http://plnkr.co/edit/WliO7CrnCsy41gkiJxnQ?p=info
+
+
+AngularJS Validations
+http://plnkr.co/edit/xZ5eSNLJw8ek7de4y2iq?p=info
+
+
+
+Assignment : User Entry Screen (try use all type of controls) with Saving feature,  Display the saved information as Table at bottom of the Screen.  Column sorting feature for the Table (Use your creativity ?)
+
+Value Service Ex
+http://plnkr.co/edit/eB10aqfuaWjpBVv5TQCo
+
+Constant Service Ex
+http://plnkr.co/edit/c9V9qGmNvPqgzWbbpGdz
+
+Service Ex
+http://plnkr.co/edit/3O7HXIAZZcONbe77JZhI
+
+Factory Service Ex
+http://plnkr.co/edit/dqz9OfG1jLOzoEkHmYTF
+
+Provider Service Ex
+http://plnkr.co/edit/phUtsoYadnWNppmQKnvY
+
+Service, Factory, Provider Ex
+http://plnkr.co/edit/p9AB27noL8tJBqx0IjuJ
+
+Communication between Modules
+http://plnkr.co/edit/gjq9IFaQI8ES7wcNHosA?p=info
+
+$http get Ex
+http://plnkr.co/edit/UbMM6WckC1ON18ujBSXG?p=info
+
+$watch Ex
+http://plnkr.co/edit/zc4gpprkTmoPkF7AJ4dx?p=info
+
+$watch object Ex
+http://plnkr.co/edit/98AmKdsDQj6JImFsNhpN?p=info
+
+Message formatting Ex
+http://plnkr.co/edit/RwfnoWyQTOQ2b6Ps9KB1?p=info
+
+
+
+ filters, multi checkbox
+http://plnkr.co/edit/gUAt2lu9LMfFHytS3tHv?p=info
+
+
+Filters 
+http://plnkr.co/edit/p8MXjFQ1KgXfx8Tn5aSK?p=info
+
+
+$broadcast, $emit, $on
+http://plnkr.co/edit/KQpoB0exOvCrPSGN9EAs?p=info
+
+ng-class
+http://plnkr.co/edit/ruSGeuhFnSS8WObM49EN?p=info
+
+
+ng-include
+http://plnkr.co/edit/kBBpQxB2cOXk6xpAH1d7?p=info
+
+clock ex
+http://plnkr.co/edit/QSpcnYPmxCP4YlFScZ0F?p=info
+
+
