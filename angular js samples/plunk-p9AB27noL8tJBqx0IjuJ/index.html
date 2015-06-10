@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+
+  <head>
+    <script data-require="angular.js@*" data-semver="1.4.0-beta.6" src="https://code.angularjs.org/1.4.0-beta.6/angular.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+
+  <body ng-controller='MyCtrl'>
+    <h1>Hello Plunker! {{1+1}}</h1>
+    
+    <ul>
+      <li ng-repeat='h in hellos track by $index'>
+        {{h}}
+      </li>
+    </ul>
+  </body>
+
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+
+  <body ng-app='myapp'  ng-controller='MainCtrl'>
+    
+    <h1>Directives</h1>
+    
+    <select ng-model='color' ng-options='color for color in colors'></select>
+    
+    <hello-world color="color"></hello-world >
+
+  </body>
+
+</html>

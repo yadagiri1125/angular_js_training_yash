@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="pathApp">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>AngularJS Plunker</title>
+        <link href="style.css" rel="stylesheet" />
+    <script src="https://code.angularjs.org/1.3.13/angular.js" data-semver="1.3.13" data-require="angular.js@1.3.x"></script>
+    <script data-require="angular-route@*" data-semver="1.4.0-beta.6" src="https://code.angularjs.org/1.4.0-beta.6/angular-route.js"></script>
+    <script src="app.js"></script>
+  </head>
+
+  <body ng-controller="MainCtrl">
+    <p>Hello {{name}}!</p>
+
+    
+    RouterProvider:
+        <br />
+    <br />
+    <a href="#/Book/Edit">Edit</a>
+ |
+        <a href="#/Book/Delete">Delete</a>
+ |
+        <a href="#/Book/Add">Add</a>
+ |
+        <a href="#/Book/Show">Show</a>
+ |
+        <a href="#/Book/Other">Other</a>
+    <div ng-view></div>
+  </body>
+
+</html>

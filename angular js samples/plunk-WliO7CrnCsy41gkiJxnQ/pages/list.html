@@ -1,0 +1,38 @@
+<div ng-controller="MainCtrl">
+      <h1>Employees</h1>
+      <a ng-href='#create'>Create</a> 
+      <a ng-href='#edit'>Edit</a>
+      <a ng-href='#delete'>Delete</a>
+      <a ng-href='#view/{{emp}}'>View</a>
+
+      <br />
+      <br />
+      <table border="1">
+        <tbody>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Country</th>
+          </tr>
+          <tr ng-repeat="emp in employees" ng-click="rowSelect($index)" ng-class="{'highlight':selectedRow==$index}">
+            <td>
+              {{emp.id}}
+            </td>
+            <td>
+              {{emp.name}} 
+            </td>
+            <td>
+              {{emp.city}}
+            </td>
+            <td>
+              {{emp.state}}
+            </td>
+            <td>
+              {{emp.country}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>

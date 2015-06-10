@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+
+  <head>
+    <script data-require="angular.js@*" data-semver="1.4.0-beta.6" src="https://code.angularjs.org/1.4.0-beta.6/angular.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body ng-controller='MainCtrl'>
+    <h1>Filters</h1>
+    
+    <h4>Currency Filter</h4>
+     Amount ($) : {{amount | currency}} <br>
+     Amount (INR) : {{amount | currency:'&#8377;'}} <br>
+     Amount (Custom) : {{amount | currency:'Rs. '}} <br>
+     Amount (No Symbol) : {{amount | currency:''}} <br>
+     Amount (0 fractions) : {{amount | currency:undefined:0}} <br>
+     
+     <h4>Number Filter</h4>
+     
+     Default formatting: {{val | number}}<br>
+     No fractions: <span>{{val | number:0}}</span><br>
+     2 fractions: <span>{{val | number:2}}</span> <br>
+     
+     <h4>LimitTo Filter</h4>
+     Original: {{numbers}} <br>
+     Limit to 3 numbers : {{ numbers | limitTo:3 }}<br>
+     
+     Original: {{letters}} <br>
+     Limit to 4 letters: {{ letters | limitTo:4 }}<br>
+     
+     Long Number: {{longNumber}} <br>
+     Limit to 5 digits: {{ longNumber | limitTo:5 }}<br>
+    
+     <h4>lowercase Filter</h4>
+     {{ "PAVAN" | lowercase }}<br>
+     
+      <h4>UPPERCASE Filter</h4>
+     {{ "pavan" | uppercase }}<br>
+     
+  </body>
+
+</html>

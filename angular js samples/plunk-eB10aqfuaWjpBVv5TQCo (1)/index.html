@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+
+  <head>
+    <script data-require="angular.js@*" data-semver="1.4.0-beta.6" src="https://code.angularjs.org/1.4.0-beta.6/angular.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <h1>Value Service</h1>
+    
+    <div ng-controller='MyController'>
+       Movie Name : {{name}} 
+    </div>
+     <br>
+     <div ng-controller='UserController'>
+       User Name : {{user.name}} <br>
+       City : {{user.city}} <br>
+       State : {{user.state}}  <br>
+    </div>
+    <br>
+     <div ng-controller='HelperController'>
+       2 is Even Number ? {{result}} <br>
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app='myApp2'>
+
+  <head>
+    <script data-require="angular.js@*" data-semver="1.4.0-beta.6" src="https://code.angularjs.org/1.4.0-beta.6/angular.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <script src="script1.js"></script>
+  </head>
+
+  <body>
+    <h1>Hello Plunker!</h1>
+    
+    <div ng-controller='myCtrl2'>
+      {{msg2}} - {{myAppMsg}}
+      <button ng-click='showMsg()'> Raise Event </button>  
+    </div>
+    
+    <div ng-controller='myCtrl1'>
+      {{msg1}}
+    </div>
+    
+  </body>
+
+</html>

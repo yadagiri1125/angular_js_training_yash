@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html  ng-app="app">
+
+  <head>
+    <script data-require="angular.js@*" data-semver="1.4.0-beta.6" src="https://code.angularjs.org/1.4.0-beta.6/angular.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <h1>Hello Plunker! {{1+1}}</h1>
+    
+    <div>
+      <div ng-controller="CalculatorController">
+        
+        Enter a number:
+        <input type="number" ng-model="number1">
+        <input type="number" ng-model="number2">
+        
+        <button ng-click="add()">+</button>
+        <button ng-click="sub()">-</button>
+        <button ng-click="mult()">*</button>
+        <button ng-click="div()">/</button>
+        
+        <div>Answer: {{answer1}}</div>
+        
+        
+        Enter a number:
+        <input type="number" ng-model="number">
+        <button ng-click="doSquare()">X<sup>2</sup></button>
+        <button ng-click="doCube()">X<sup>3</sup></button>
+         
+        <div>Answer: {{answer}}</div>
+      </div>
+    </div>
+
+  </body>
+
+</html>

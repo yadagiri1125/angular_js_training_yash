@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app='myapp'>
+
+  <head>
+    <script data-require="angular.js@*" data-semver="1.4.0-beta.3" src="https://code.angularjs.org/1.4.0-beta.3/angular.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body >
+    <h1>ng-include Ex</h1>
+    
+    <div ng-controller='MyController'>
+
+      <select ng-model="myselect" ng-options="page.display for page in pages"></select>
+      <div width='200px' height='200px' border='1px' class='normal' ng-include='myselect.page'></div>
+      
+   </div>
+  
+  </body>
+
+</html>
