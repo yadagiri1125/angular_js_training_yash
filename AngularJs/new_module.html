@@ -1,0 +1,46 @@
+<html ng-app='HomeModule'>
+<head>
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <script src="src/angular.js"></script>
+    <script src="src/controllers.js"></script>
+</head>
+<body>
+<p>{{someText.message}}</p>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js">
+
+</script>
+<!--1.-->
+<div class="clear_with_height"></div>
+
+<div ng-controller="HomeController">
+    <h1>{{pageHeading | titleCase}}</h1>
+</div>
+<div class="clear_with_height"></div>
+
+<!--2-->
+<h1>A-Mail</h1>
+<div ng-view></div>
+
+<script>
+//1.
+    var homeModule = angular.module('HomeModule', []);
+    homeModule.filter('titleCase', function() {
+        var titleCaseFilter = function(input) {
+            var words = input.split(' ');
+            for (var i = 0; i < words.length; i++) {
+                words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+            }
+            return words.join(' ');
+        };
+        return titleCaseFilter;
+    });
+
+    function HomeController($scope) {
+        $scope.pageHeading = 'behold the majesty of your page title';
+    }
+
+
+
+</script>
+</body>
+</html>

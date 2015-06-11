@@ -1,0 +1,18 @@
+.bcolor {
+    background-color: red;
+}
+.menu-disabled-true {
+    color: gray;
+}
+.error {
+    background-color: red;
+}
+.warning {
+    background-color: yellow;
+}
+.selected {
+    background-color: lightgreen;
+}
+.clear_with_height{
+    margin-top: 5% !important;
+}
