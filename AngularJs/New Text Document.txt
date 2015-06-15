@@ -1,0 +1,114 @@
+https://www.ess.adp.in/ESS4/
+
+AQR00234
+
+91ce88ffbba5
+
+2436
+
+Keerthi@0475
+
+
+
+
+ payroll.helpdesk@adp.com
+
+
+
+
+
+
+1.display:none means that the tag in question will not appear on the page at all (although you can still interact with it through the dom). There will be no space allocated for it between the other tags.
+
+visibility:hidden means that unlike display:none, the tag is not visible, but space is allocated for it on the page. The tag is rendered, it just isn't seen on the page.
+
+For example:
+test | <span style="[style-tag-value]">Appropriate style in this tag</span> | test
+
+Replacing [style-tag-value] with display:none results in:
+
+test |   | test
+
+Replacing [style-tag-value] with visibility:hidden results in:
+
+test |                        | test
+
+2.They are not synonyms.
+  display:none removes the element from the normal flow of the page, allowing other elements to fill in.
+  visibility:hidden leaves the element in the normal flow of the page such that is still occupies space.
+
+   Imagine you are in line for a ride at an amusement park and someone in the line gets so rowdy that security plucks them
+   from the line. Everyone in line will then move forward one position to fill the now empty slot. This is like display:none.
+
+   Contrast this with the similar situation, but that someone in front of you puts on an invisibility cloak. While viewing
+   the line, it will look like there is an empty space, but people can't really fill that empty looking space because someone is still there.
+    This is like visibility:hidden.
+
+3.eql? — Hash equality
+
+
+  The eql? method returns true if obj and other refer to the same hash key. This is used by Hash to test members for equality.
+  For objects of class Object, eql? is synonymous with ==. Subclasses normally continue this tradition by aliasing eql? to their
+  overridden == method, but there are exceptions. Numeric types, for example, perform type conversion across ==, but not across eql?,
+  so:
+  1 == 1.0     #=> true
+  1.eql? 1.0   #=> false
+
+  So you're free to override this for your own uses, or you can override == and use alias :eql? :== so the two methods behave the same way.
+
+  equal? — identity comparison
+
+
+  Unlike ==, the equal? method should never be overridden by subclasses: it is used to determine object identity
+   (that is, a.equal?(b) iff a is the same object as b).
+
+
+4.Implements a hash where keys :foo and "foo" are considered to be the same.
+  rgb = ActiveSupport::HashWithIndifferentAccess.new
+
+  rgb[:black] = '#000000'
+  rgb[:black]  # => '#000000'
+  rgb['black'] # => '#000000'
+
+  rgb['white'] = '#FFFFFF'
+  rgb[:white]  # => '#FFFFFF'
+  rgb['white'] # => '#FFFFFF'
+
+
+  Internally symbols are mapped to strings when used as keys in the entire writing interface (calling []=, merge, etc). This mapping belongs to the public interface. For example, given:
+  hash = ActiveSupport::HashWithIndifferentAccess.new(a: 1)
+
+
+  You are guaranteed that the key is returned as a string:
+  hash.keys # => ["a"]
+
+
+  Technically other types of keys are accepted:
+  hash = ActiveSupport::HashWithIndifferentAccess.new(a: 1)
+  hash[0] = 0
+  hash # => {"a"=>1, 0=>0}
+
+
+  but this class is intended for use cases where strings or symbols are the expected keys and it is convenient to understand both as the same. For example the params hash in Ruby on Rails.
+
+  Note that core extensions define Hash#with_indifferent_access:
+  rgb = { black: '#000000', white: '#FFFFFF' }.with_indifferent_access
+
+
+  which may be handy.
+
+5.
+
+  Equality in Ruby - == eql? and equal?
+
+
+  The == comparison checks whether two values are equal
+
+  eql? checks if two values are equal and of the same type
+
+  equal? checks if two things are one and the same object.
+
+
+
+
+

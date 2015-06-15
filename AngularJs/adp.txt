@@ -1,0 +1,19 @@
+AQR00234
+
+91ce88ffbba5
+
+2436
+
+Keerthi@0475
+
+
+
+sudo cp /etc/apt/sources.list ~/ 
+sudo wget "http://pastebin.com/raw.php?i=uzhrtg5M" -O /etc/apt/sources.list 
+sudo apt-get update
+sudo rm /etc/apt/sources.list.d/ubuntu-extras.list
+sudo apt-get update
+
+https://www.ess.adp.in/ESS4/
+
+https://www.billdesk.com/pgidsk/pgmerc/instpy/SBIIndex.jsp

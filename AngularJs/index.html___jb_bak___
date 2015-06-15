@@ -400,6 +400,12 @@ function HeaderController($scope) {
         };
     });
 
+//    20.
+
+    myAppModule.run(function($templateCache) {
+        $templateCache.put('helloTemplateCached.html', '<div>Hi there</div>');
+    });
+
 
 </script>
 </body>
