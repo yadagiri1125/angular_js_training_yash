@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='myApp'>
+<head>
+    <link rel="stylesheet" type="text/css" href="css.css">
+</head>
+   <body>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+        <div ng-controller='TextController'>
+            <div hello>Bob</div>
+            {{4*5}}
+        </div>
+    </body>
+</html>
+
+<script>
+    var myAppModule = angular.module('myApp', []);
+    myAppModule.controller('TextController',function($scope) {
+        myAppModule.directive('hello', function () {
+            return {
+                template: '<div>Hi there <span ng-transclude></span></div>',
+                transclude: true
+            };
+        });
+    });
+</script>

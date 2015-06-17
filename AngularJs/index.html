@@ -7,6 +7,7 @@
 <p>{{someText.message}}</p>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js">
 
+
 </script>
 <!--// 1.hello world controller-->
 <div ng-controller='HelloController'>
@@ -166,7 +167,7 @@
     <div>Discount: {{discount | currency}}</div>
     <div>Subtotal: {{subtotal() | currency}}</div>
 </div>
-
+<div class="clear_with_height"></div>
 <!--15.-->
 
 <h1>Sign Up</h1>
@@ -181,7 +182,7 @@
                      ng-minlength='1'></div>
     <div><button>Submit</button></div>
 </form>
-
+<div class="clear_with_height"></div>
 <!--16.-->
 <h1>Sign Up</h1>
 <form name='addUserForm1' ng-controller="AddUserController">
@@ -195,7 +196,8 @@
                      ng-min='1'></div>
     <div><button ng-click='addUser()' ng-disabled='!addUserForm1.$valid'>Submit</button> </div>
 </form>
-
+<div class="clear_with_height"></div>
+{{ 5*4 }}
 <!--17.-->
 
 <tab-set>
@@ -206,13 +208,27 @@
         <!-- preferences UI goes here -->
     </tab>
 </tab-set>
-
+{{ 5*4 }}
+<div class="clear_with_height"></div>
 <!--18.-->
+{{ 5*4 }}
 <hello></hello>
-
+<div class="clear_with_height"></div>
+{{ 5*4 }}
 <!--19.-->
 <hello1></hello1>
+<div class="clear_with_height"></div>
+{{ 5*4 }}
+<!--20.-->
 
+<script type='text/ng-template' id='helloTemplateInline.html'>
+    <div>Hi there</div>
+</script>
+
+<hello2></hello2>
+{{ 5*4 }}
+<!--21.-->
+<div hello>Bob</div>
 
 <script>
     var myAppModule = angular.module('myApp', []);
@@ -360,6 +376,8 @@ function HeaderController($scope) {
             }
             return total;
         }
+
+
         $scope.subtotal = function() {
             return $scope.totalCart() - $scope.discount;
         };
@@ -400,7 +418,28 @@ function HeaderController($scope) {
         };
     });
 
+//    20.
 
-</script>
-</body>
-</html>
+//    var appModule = angular.module('app', []);
+    myAppModule.run(function($templateCache) {
+        $templateCache.put('helloTemplateCached.html', '<div>Hi there from helloo2 </div>');
+    });
+    myAppModule.directive('hello2', function() {
+        return {
+            restrict: 'E',
+            templateUrl: 'helloTemplateCached.html',
+            replace: true
+        };
+    });
+
+
+//    21.
+
+    myAppModule.directive('hello', function() {
+        return {
+            template: '<div>Hi there <span ng-transclude></span></div>',
+            transclude: true
+        };
+    });
+
+    </script>
